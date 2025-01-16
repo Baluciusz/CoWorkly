@@ -83,3 +83,12 @@ body {
   .add .btn:hover svg {
     fill: aqua; /* Kék szín hover esetén */
   }
+
+  /*chatprotoype (átmenetileg ide)*/
+
+  .p-3 .bg-light .rounded{
+    color: black;
+  }
+  .card-header .bg-primary .text-white{
+    border-radius: 15px;
+  }
