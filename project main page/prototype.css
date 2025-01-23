@@ -75,20 +75,54 @@ body {
     padding: 85px;
 }
 .add .btn svg {
-    fill: white; /* Alapértelmezett szín */
-    transition: fill 0.3s ease; /* Simább színátmenet */
+    fill: white; 
+    transition: fill 0.3s ease; 
   }
   
-  /* Hover állapot */
+
   .add .btn:hover svg {
-    fill: aqua; /* Kék szín hover esetén */
+    fill: aqua; 
   }
 
   /*chatprotoype (átmenetileg ide)*/
+  
+  .chat-container {
+    background: linear-gradient(to right, #ccc, #999);
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
-  .p-3 .bg-light .rounded{
-    color: black;
-  }
-  .card-header .bg-primary .text-white{
-    border-radius: 15px;
-  }
+.main-chat {
+    flex: 1;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer {
+    background-color: #d1d1d1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer input[type="text"] {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
