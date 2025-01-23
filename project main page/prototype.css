@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-image: url("assets/hatter.png");
+    background-image: url("assets/background.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -89,7 +89,7 @@ body {
   .chat-container {
     background: linear-gradient(to right, #ccc, #999);
     width: 800px;
-    height: 600px;
+    height: 500px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -97,11 +97,13 @@ body {
 
 .main-chat {
     flex: 1;
-    background: black;
+    background: rgba(198, 190, 190, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    width: 800px;
+    height: 500px;
 }
 
 .footer {
@@ -109,7 +111,8 @@ body {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer input[type="text"] {
@@ -125,4 +128,47 @@ body {
     border: none;
     border-radius: 5px;
     padding: 5px 15px;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  width: 800px;
+    height: 66px;
+}
+
+.form-container {
+    width: 800px;
+    height: 58px;
+  background-color: white;
+}
+
+.form-container .btn {
+    background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
 }
