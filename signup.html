@@ -14,7 +14,9 @@
         <form id="form">
             <div>
                 <label for="username-input">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/>
+                    </svg>
                 </label>
                 <input type="text" name="username" id="username-input" placeholder="Username">
             </div>
@@ -27,18 +29,89 @@
             <div>
                 <label for="password-input">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
+                        <path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Z"/>
+                    </svg>
                 </label>
                 <input type="password" name="password" id="password-input" placeholder="Password">
             </div>
             <div>
                 <label for="repeat-password-input">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
+                        <path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Z"/>
+                    </svg>
                 </label>
                 <input type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat Password">
             </div>
+        </form>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">
+                By creating an account you agree to our 
+                <a href="#" id="terms-link" style="color:dodgerblue">Terms & Privacy</a>
+            </label>
+        </div>
+
+        <form id="form">
             <button type="submit">Signup</button>
         </form>
-        <p>Already have an Account? <a href="login.html">login</a></p>
+        
+        <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Terms & Privacy</h2>
+
+            <p>Below, we outline the protection and usage terms of your data.</p>
+
+            <div class="section-title">General Terms</div>
+            <p>To maximize your user experience, you agree to carefully consider every decision before clicking any button. If any feature, color, or format does not meet your expectations, please feel free to immediately leave this page, as we are not responsible for the colors, fonts, or flashing animations displayed on the screen.</p>
+            
+            <div class="section-title">Data Collection</div>
+            <p>Our website stores your most recent purchases, past search history, and favorite cat videos to make your future experiences more personalized. Your data is secure, especially when hidden in a secret folder. Data usage is strictly limited to enhancing your enjoyment of the website.</p>
+            
+            <div class="section-title">Third-Party Access</div>
+            <p>Anything you share with us is encrypted, unless we accidentally forget to encrypt it. We never give third-party access unless we find some unique, cute cat pictures we'd like to share. If a third party accidentally gains access to our data, we are not responsible.</p>
+            
+            <div class="section-title">Advertisements and External Links</div>
+            <p>Our site occasionally displays advertisements for fantastic products that have nothing to do with our services. By clicking on an ad, you acknowledge that you've entered the mysterious and sometimes confusing world of the internet, where you can get lost on a rainbow-colored ad path at any time.</p>
+            
+            <div class="section-title">Limited Liability</div>
+            <p>As a provider, we are not responsible for colorful buttons, linked videos, or random internet issues for which we never received an explanation. Under no circumstances are we liable if, during your internet surfing, a new acquaintance is made or you accidentally find a new job offer.</p>
+            
+            <div class="section-title">Intellectual Property</div>
+            <p>The texts, images, and animations on the site are all our intellectual property, to which we hold the rights. Some parts of the images may be freely used by others, if they manage to retrieve them from the internet and share them appropriately.</p>
+            
+            <div class="section-title">User Content</div>
+            <p>Any content uploaded to the site with user consent is automatically stored as intellectual property. If you accidentally forget to read the small print, you also agree that we will store whatever you upload.</p>
+            
+            <div class="section-title">Modifications</div>
+            <p>We reserve the right to modify our services, website content, and terms at any time without prior notice. Additionally, if we're feeling good, we may update the design, animations, and color scheme without consulting anyone.</p>
+            
+            <div class="section-title">Remedies</div>
+            <p>If you experience any issues while using the website, feel free to share them with us. We will read them and, if possible, forget about what happened. If we cannot resolve the issue, we continue to warmly welcome further attempts.</p> 
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("terms-modal");
+        var btn = document.getElementById("terms-link");
+        var closeBtn = document.querySelector(".close");
+
+        btn.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        };
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>

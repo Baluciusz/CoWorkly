@@ -74,3 +74,18 @@ allInputs.forEach(input => {
         }
     })
 })
+
+document.getElementById("terms-link").addEventListener("click", function() {
+    document.getElementById("terms-modal").style.display = "block";
+});
+
+document.querySelector(".close").addEventListener("click", function() {
+    document.getElementById("terms-modal").style.display = "none";
+});
+
+window.onclick = function(event) {
+    let modal = document.getElementById("terms-modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
