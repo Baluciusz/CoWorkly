@@ -256,3 +256,16 @@ input[type="checkbox"]:checked + label::before {
     font-weight: bold;
     color: #444;
 }
+
+.incorrect input {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+#error-message {
+    color: red;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
