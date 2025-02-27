@@ -84,39 +84,80 @@ body {
     fill: aqua; 
   }
 
-  /*chatprotoype (átmenetileg ide)*
+  /*chatprotoype (átmenetileg ide)*/
 
-/* Chat popup alap stílus */
 .chat-popup {
     position: fixed;
     top: 40%;
     left: 80%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.9); /* Fehér háttér, átlátszóbb */
+    background: rgba(255, 255, 255, 0.9);
     width: 450px;
     height: 480px;
     border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Finom árnyék */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     z-index: 200;
     display: none;
     flex-direction: column;
 }
 
-/* Fő chat terület */
 .main-chat {
     flex: 1;
     padding: 15px;
-    background-color: rgba(198, 190, 190, 0.8); /* Finom szürke háttér */
+    background-color: rgba(198, 190, 190, 0.8);
     border-radius: 10px;
-    overflow-y: auto; /* Görgetés lehetősége */
-    color: #333; /* Sötétebb szöveg */
+    overflow-y: auto;
+    color: #333;
     font-size: 14px;
     height: 400px;
 }
 
+/* Chat üzenet */
+.chat-message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Profilkép és felhasználó név */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Üzenet tartalom */
+.message-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: calc(100% - 60px);
+}
+
 /* Chat input és gombok */
 .footer {
-    background-color: #f0f0f0; /* Világos szürke háttér */
+    background-color: #f0f0f0;
     padding: 12px 15px;
     border-radius: 0 0 10px 10px;
     display: flex;
@@ -134,12 +175,12 @@ body {
 }
 
 .footer input[type="text"]:focus {
-    border-color: #007bff; /* Kék szín a fókuszáláskor */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Finom kék árnyék */
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
 .footer button {
-    background-color: #007bff; /* Kék gomb */
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 20px;
@@ -147,10 +188,11 @@ body {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 .footer button:hover {
-    background-color: #0056b3; /* Sötétebb kék árnyalat, ha fölé viszik az egeret */
+    background-color: #0056b3;
 }
 
 .footer button:focus {
@@ -159,14 +201,14 @@ body {
 
 /* Cancel gomb */
 .cancel {
-    background-color: #dc3545; /* Piros háttér */
+    background-color: #dc3545;
     color: white;
-    font-size: 24px; /* Ikon mérete */
+    font-size: 24px;
     text-align: center;
-    line-height: 2; /* Középre igazítja az X-t */
-    border-radius: 50%; /* Kerek forma */
-    width: 35px; /* Kör átmérője */
-    height: 35px; /* Kör átmérője */
+    line-height: 2;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     border: none;
     position: absolute;
     top: 10px;
@@ -179,20 +221,21 @@ body {
 }
 
 .cancel::before {
-    
-    font-size: 28px; /* Ikon nagyobb betűméret */
-    color: white; /* Fehér szín az X-hez */
+    font-size: 28px;
+    color: white;
 }
 
 .cancel:hover {
-    background-color: #c82333; /* Sötétebb piros árnyalat hover esetén */
-    transform: scale(1.1); /* Finom nagyítás hover hatásra */
+    background-color: #c82333;
+    transform: scale(1.1);
 }
 
 .cancel:focus {
-    outline: none; /* Nincs fókusz körvonal */
+    outline: none;
 }
+
 /* Hover állapotok */
 .chat-popup:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Erősebb árnyék, ha fölé viszik */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+

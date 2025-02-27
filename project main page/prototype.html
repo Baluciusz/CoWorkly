@@ -90,23 +90,31 @@
               </button>
             </div>
     </div>
-    <div class="content">
+    <div class="content"> 
         <div class="chat-popup" id="myForm">
             <form action="/action_page.php" class="form-container">
-              <h1>Chat</h1>
-              <div class="main-chat">
-                <div class="chat-area">Chat tartalom helye</div>
-            </div>
-    
-            <div class="footer">
-                <input type="text" placeholder="Üzenet küldése" />
-                <button>Elküldés</button>
-            </div>
-              
-              <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+                <h1>Chat</h1>
+                <div class="main-chat">
+                    <div class="chat-message">
+                        <div class="user-info">
+                            <img class="profile-pic" src="groupicons/legenybucsu.jpg" alt="Profilkép">
+                            <div class="user-name">Ferenc</div>
+                        </div>
+                        <div class="message-text">Ez egy üzenet szövege.</div>
+                    </div>
+                    <!-- További üzenetek -->
+                </div>
+        
+                <div class="footer">
+                    <input type="text" placeholder="Üzenet küldése" />
+                    <button>Elküldés</button>
+                </div>
+                  
+                <button type="button" class="btn cancel" onclick="closeForm()">X</button>
             </form>
-          </div>
         </div>
+    </div>
+    
 
     <script src="chat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
