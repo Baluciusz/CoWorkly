@@ -84,91 +84,115 @@ body {
     fill: aqua; 
   }
 
-  /*chatprotoype (átmenetileg ide)*/
-  
-  .chat-container {
-    background: linear-gradient(to right, #ccc, #999);
-    width: 800px;
-    height: 500px;
-    border-radius: 10px;
-    display: flex;
+  /*chatprotoype (átmenetileg ide)*
+
+/* Chat popup alap stílus */
+.chat-popup {
+    position: fixed;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9); /* Fehér háttér, átlátszóbb */
+    width: 450px;
+    height: 480px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Finom árnyék */
+    z-index: 200;
+    display: none;
     flex-direction: column;
 }
 
+/* Fő chat terület */
 .main-chat {
     flex: 1;
-    background: rgba(198, 190, 190, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 800px;
-    height: 500px;
+    padding: 15px;
+    background-color: rgba(198, 190, 190, 0.8); /* Finom szürke háttér */
+    border-radius: 10px;
+    overflow-y: auto; /* Görgetés lehetősége */
+    color: #333; /* Sötétebb szöveg */
+    font-size: 14px;
+    height: 400px;
 }
 
+/* Chat input és gombok */
 .footer {
-    background-color: #d1d1d1;
-    padding: 10px;
+    background-color: #f0f0f0; /* Világos szürke háttér */
+    padding: 12px 15px;
+    border-radius: 0 0 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .footer input[type="text"] {
-    width: 90%;
-    padding: 5px;
+    width: 80%;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.footer input[type="text"]:focus {
+    border-color: #007bff; /* Kék szín a fókuszáláskor */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Finom kék árnyék */
 }
 
 .footer button {
-    background-color: black;
+    background-color: #007bff; /* Kék gomb */
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 5px 15px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
+.footer button:hover {
+    background-color: #0056b3; /* Sötétebb kék árnyalat, ha fölé viszik az egeret */
 }
 
-.form-popup {
-  display: none;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-  width: 800px;
-    height: 66px;
+.footer button:focus {
+    outline: none;
 }
 
-.form-container {
-    width: 800px;
-    height: 58px;
-  background-color: white;
+/* Cancel gomb */
+.cancel {
+    background-color: #dc3545; /* Piros háttér */
+    color: white;
+    font-size: 24px; /* Ikon mérete */
+    text-align: center;
+    line-height: 2; /* Középre igazítja az X-t */
+    border-radius: 50%; /* Kerek forma */
+    width: 35px; /* Kör átmérője */
+    height: 35px; /* Kör átmérője */
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.form-container .btn {
-    background-color: red;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+.cancel::before {
+    
+    font-size: 28px; /* Ikon nagyobb betűméret */
+    color: white; /* Fehér szín az X-hez */
 }
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+
+.cancel:hover {
+    background-color: #c82333; /* Sötétebb piros árnyalat hover esetén */
+    transform: scale(1.1); /* Finom nagyítás hover hatásra */
+}
+
+.cancel:focus {
+    outline: none; /* Nincs fókusz körvonal */
+}
+/* Hover állapotok */
+.chat-popup:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Erősebb árnyék, ha fölé viszik */
 }

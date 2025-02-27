@@ -43,21 +43,21 @@
 
     <div class="content">
         <div class="card-deck">
-            <div class="card">
+            <div class="card" onclick="openForm()">
                 <img class="card-img-top" src="groupicons/szmunkakozosseg.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Szülői munka közösség</h5>
                     <p class="card-text"><small class="text-muted">Ferenc, József, Matyás...</small></p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="openForm()">
                 <img class="card-img-top" src="groupicons/default.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Ferenc, Sándor</h5>
                     <p class="card-text"><small class="text-muted">Ferenc, Sándor</small></p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="openForm()">
                 <img class="card-img-top" src="groupicons/default.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Adjon hozzá tagot! <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
@@ -67,14 +67,14 @@
                     <p class="card-text"><small class="text-muted">Ferenc</small></p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="openForm()">
                 <img class="card-img-top" src="groupicons/defaulttools.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Hinta építés</h5>
                     <p class="card-text"><small class="text-muted">Ferenc, Sándor, János</small></p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="openForm()">
                 <img class="card-img-top" src="groupicons/legenybucsu.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Legény búcsú</h5>
@@ -90,7 +90,25 @@
               </button>
             </div>
     </div>
+    <div class="content">
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Chat</h1>
+              <div class="main-chat">
+                <div class="chat-area">Chat tartalom helye</div>
+            </div>
+    
+            <div class="footer">
+                <input type="text" placeholder="Üzenet küldése" />
+                <button>Elküldés</button>
+            </div>
+              
+              <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+            </form>
+          </div>
+        </div>
 
+    <script src="chat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
