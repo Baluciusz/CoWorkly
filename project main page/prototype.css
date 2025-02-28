@@ -1,8 +1,15 @@
 body {
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-image: url("assets/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover; /* Kitölti az egész képernyőt */
+        background-attachment: fixed; /* Rögzíti a hátteret */
+        background-position: center center; /* Középre igazítja a hátteret */
+}
+h1{
+    text-align: center;
 }
 .navbar {
     flex: 0 0 140px; 
