@@ -10,7 +10,6 @@
 <body>
     <div class="wrapper">
         <h1>Regisztáció</h1>
-        <p id="error-message"></p>
         <form id="form">
             <div>
                 <label for="username-input">
@@ -38,74 +37,10 @@
                 </label>
                 <input type="password" name="repeat_password" id="repeat-password-input" placeholder="Ismételd meg a jelszavad" required>
             </div>
+            <button type="submit">Regisztráció</button>
         </form>
-            <div class="checkbox-container">
-                <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">
-                        A fiók létrehozásával elfogadod a
-                    <a href="#" id="terms-link" style="color:dodgerblue">Feltételeket és az Adatvédelmet.</a>
-                </label>
-            </div>
-            <form action="form">
-                <button type="submit">Regisztálás</button>
-            </form>  
         <p>Van már fiókod? <a>Jelentkezz be</a></p>
     </div>
     <div class="welcome-text"><img src="images/weblogo.png" alt="CoWorkly"></div>
-    <div id="terms-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Terms & Privacy</h2>
-
-            <p>Below, we outline the protection and usage terms of your data.</p>
-
-            <div class="section-title">General Terms</div>
-            <p>To maximize your user experience, you agree to carefully consider every decision before clicking any button. If any feature, color, or format does not meet your expectations, please feel free to immediately leave this page, as we are not responsible for the colors, fonts, or flashing animations displayed on the screen.</p>
-            
-            <div class="section-title">Data Collection</div>
-            <p>Our website stores your most recent purchases, past search history, and favorite cat videos to make your future experiences more personalized. Your data is secure, especially when hidden in a secret folder. Data usage is strictly limited to enhancing your enjoyment of the website.</p>
-            
-            <div class="section-title">Third-Party Access</div>
-            <p>Anything you share with us is encrypted, unless we accidentally forget to encrypt it. We never give third-party access unless we find some unique, cute cat pictures we'd like to share. If a third party accidentally gains access to our data, we are not responsible.</p>
-            
-            <div class="section-title">Advertisements and External Links</div>
-            <p>Our site occasionally displays advertisements for fantastic products that have nothing to do with our services. By clicking on an ad, you acknowledge that you've entered the mysterious and sometimes confusing world of the internet, where you can get lost on a rainbow-colored ad path at any time.</p>
-            
-            <div class="section-title">Limited Liability</div>
-            <p>As a provider, we are not responsible for colorful buttons, linked videos, or random internet issues for which we never received an explanation. Under no circumstances are we liable if, during your internet surfing, a new acquaintance is made or you accidentally find a new job offer.</p>
-            
-            <div class="section-title">Intellectual Property</div>
-            <p>The texts, images, and animations on the site are all our intellectual property, to which we hold the rights. Some parts of the images may be freely used by others, if they manage to retrieve them from the internet and share them appropriately.</p>
-            
-            <div class="section-title">User Content</div>
-            <p>Any content uploaded to the site with user consent is automatically stored as intellectual property. If you accidentally forget to read the small print, you also agree that we will store whatever you upload.</p>
-            
-            <div class="section-title">Modifications</div>
-            <p>We reserve the right to modify our services, website content, and terms at any time without prior notice. Additionally, if we're feeling good, we may update the design, animations, and color scheme without consulting anyone.</p>
-            
-            <div class="section-title">Remedies</div>
-            <p>If you experience any issues while using the website, feel free to share them with us. We will read them and, if possible, forget about what happened. If we cannot resolve the issue, we continue to warmly welcome further attempts.</p> 
-        </div>
-    </div>
-    <script>
-        var modal = document.getElementById("terms-modal");
-        var btn = document.getElementById("terms-link");
-        var closeBtn = document.querySelector(".close");
-
-        btn.onclick = function(event) {
-            event.preventDefault();
-            modal.style.display = "block";
-        };
-
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        };
-
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        };
-    </script>
 </body>
 </html>
