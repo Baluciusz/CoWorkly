@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiba bejelentés</title>
+    <link rel="stylesheet" href="css/erroreport.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Hiba bejelentés</h1>
+            <label for="error_type">Hiba típusa:</label>
+            <select id="error_type" name="error_type">
+                <option value="login_problem">Bejelentkezési probléma</option>
+                <option value="chat_issue">Csevegési probléma</option>
+                <option value="file_upload_error">Fájl feltöltési hiba</option>
+                <option value="notification_issue">Értesítési probléma</option>
+                <option value="other">Egyéb</option>
+            </select>   
+            <label for="comment">Megjegyzés:</label>
+            <textarea id="comment" name="comment" maxlength="300" placeholder="Írd ide a megjegyzésed..." required></textarea>         
+            <button type="submit">Beküldés</button>
+
+        </form>
+    </div>
+</body>
